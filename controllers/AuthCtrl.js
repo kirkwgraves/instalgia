@@ -1,5 +1,5 @@
-app.controller('AuthCtrl', ['Auth', 'authFactory', '$location'],
-	function(Auth, authFactory, $location) {
+app.controller('AuthCtrl', ['Auth', '$location',
+	function(Auth, $location) {
 
 		var self = this;
 
@@ -7,15 +7,15 @@ app.controller('AuthCtrl', ['Auth', 'authFactory', '$location'],
 			Auth.$createUser({
 				email: self.email,
 				password: self.password
-				}).then(function(userData) {
-					console.log('User created with uid: ', userData.uid);
-				}).catch(function(error) {
-					self.error = error;
-					console.log('error', error);
-				});
+			}).then(function(userData) {
+				console.log('User created with uid: ', userData.uid);
+			}).catch(function(error) {
+				self.error = error;
+				console.log('error', error);
+			});
 
-				self.email = null;
-				self.password = null;
+			self.email = null;
+			self.password = null;
 			
 		};
 
@@ -37,30 +37,21 @@ app.controller('AuthCtrl', ['Auth', 'authFactory', '$location'],
 		self.logout = function() {
 
 			Auth.$unauth();
-			$location.path('/login');
+			$location.path('/');
 
+		};
 
+		self.removeUser = function() {
 
+			Auth.$removeUser({
+				email: self.email,
+				password: self.password
+			}).then(function() {
+				self.message = "User removed!"
+				console.log(self.message);
+			}).catch(function(error) {
+				self.error = error;
+			});
+		};
 
-		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	});
+}]);

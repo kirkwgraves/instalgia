@@ -3,7 +3,7 @@ app.factory('Auth', ['$firebaseAuth',
 			var ref = new Firebase('https://instalgia.firebaseio.com/');
 			return $firebaseAuth(ref);
 		}
-	]);
+]);
 
 
 
