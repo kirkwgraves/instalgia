@@ -1,0 +1,13 @@
+<form name="form" class="register-form">
+  <div class="email__register">
+	  <span>EMAIL</span> <input placeholder="user@example.com" ng-model="authCtrl.email" type="text"/>
+  </div>
+  <div class="password__register">
+	  <span>PASSWORD</span> <input placeholder="Enter a password" ng-model="authCtrl.password" type="text"/>
+  </div>
+
+  <a href="#/" class="btn btn-material-blue register__btn" ng-click="authCtrl.register()">REGISTER</a>
+
+  <button class="removeBtn btn btn-material-red" ng-click="authCtrl.removeUser()">REMOVE</button>
+  
+</form>
