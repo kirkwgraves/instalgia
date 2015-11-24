@@ -6,12 +6,12 @@
 			<p>Log in to view your nostalgic pics, or sign up to get instalgic!</p>
 
 			<div>
-				<input required type="email" ng-model="authCtrl.email" placeholder="memories@goneforever.com"/>
+				<input class="form-control" required type="email" ng-model="authCtrl.email" placeholder="memories@goneforever.com"/>
 			</div>
 			<div>
-				<input required type="password" ng-model="authCtrl.password" placeholder="Enter your password"/>
+				<input class="form-control" required type="password" ng-model="authCtrl.password" placeholder="Enter your password"/>
 			</div>
-			<button type="button" ng-click="authCtrl.login()" ng-show="authCtrl.email && authCtrl.password">Log in</button>
+			<button class="btn btn-material-blue" ng-click="authCtrl.login()" ng-show="authCtrl.email && authCtrl.password">Log in</button>
 
 		<h4>You can also log in using Github</h4>
 		

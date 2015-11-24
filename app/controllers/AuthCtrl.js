@@ -9,14 +9,12 @@ app.controller('AuthCtrl', ['Auth', '$firebaseAuth', 'userFactory', '$location',
 				password: self.password
 			}).then(function(userData) {
 				console.log('User created with uid: ', userData.uid);
+				$location.path('/');
 			}).catch(function(error) {
 				self.error = error;
 				console.log('error', error);
 			});
 
-			self.email = null;
-			self.password = null;
-			
 		};
 
 		self.login = function() {
@@ -37,9 +35,7 @@ app.controller('AuthCtrl', ['Auth', '$firebaseAuth', 'userFactory', '$location',
 		self.logout = function() {
 			console.log('logging out');
 				Auth.$unauth();
-			
-			// $location.path('/');
-
+				$location.path('/');
 		};
 
 		self.removeUser = function() {
