@@ -3,14 +3,7 @@ app.factory('userFactory', ['$firebaseArray', '$route',
 
 	var picsArray = [];
 	var loggedInUser, ref;
-	var newPic = {
-		title: null,
-		description: null,
-		tags: null,
-		albumName: null,
-		imageUrl: null
-	};
-
+	
 	return {
 
 		setUser: function(authData) {
@@ -29,9 +22,9 @@ app.factory('userFactory', ['$firebaseArray', '$route',
 			.then(function(ref) {
 				var id = ref.key();
 				console.log('added pic with id ' + id);
-			})
-		},
+			});
 
+		},
 
 		getPicsArray: function() {
 			console.log('picsArray', picsArray);

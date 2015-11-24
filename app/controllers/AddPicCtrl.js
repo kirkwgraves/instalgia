@@ -12,10 +12,19 @@ app.controller('AddPicCtrl', ['userFactory', '$firebaseArray',
 				description: self.newPic.description,
 				tags: self.newPic.tags,
 				albumName: self.newPic.albumName,
-				imageUrl: null
+				imageUrl: self.newPic.imageUrl
 			};
 
 			userFactory.addPic(newPic);
+
+			self.newPic = {
+				title: "",
+				description: "",
+				tags: "",
+				albumName: "",
+				imageUrl: ""
+			};
+
 		};
 		
 
