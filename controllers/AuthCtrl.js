@@ -1,5 +1,5 @@
-app.controller('AuthCtrl', ['Auth', '$location',
-	function(Auth, $location) {
+app.controller('AuthCtrl', ['Auth', '$firebaseAuth', 'userFactory', '$location',
+	function(Auth, $firebaseAuth, userFactory, $location) {
 
 		var self = this;
 
@@ -24,10 +24,11 @@ app.controller('AuthCtrl', ['Auth', '$location',
 			Auth.$authWithPassword({
 				email: self.email, 
 				password: self.password
-			}).then(function(authData) {
+			}).then(function(authData, loggedInUser) {
 				console.log('Logged in as: ', authData.uid);
 				$location.path('/profile');
 				userFactory.setUser(authData);
+				console.log('loggedInUser', loggedInUser);
 			}).catch(function(error) {
 				self.error = error;
 				console.log('Authentication failed:', error);
@@ -36,7 +37,11 @@ app.controller('AuthCtrl', ['Auth', '$location',
 
 		self.logout = function() {
 
-			Auth.$unauth();
+
+			Auth.authObj.$logout();
+			con
+			console.log('User logged out!');
+			console.log('authData.uid', authData.uid);
 			$location.path('/');
 
 		};
