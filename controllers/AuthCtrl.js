@@ -28,7 +28,6 @@ app.controller('AuthCtrl', ['Auth', '$firebaseAuth', 'userFactory', '$location',
 				console.log('Logged in as: ', authData.uid);
 				$location.path('/profile');
 				userFactory.setUser(authData);
-				console.log('loggedInUser', loggedInUser);
 			}).catch(function(error) {
 				self.error = error;
 				console.log('Authentication failed:', error);
@@ -36,13 +35,10 @@ app.controller('AuthCtrl', ['Auth', '$firebaseAuth', 'userFactory', '$location',
 		};
 
 		self.logout = function() {
-
-
-			Auth.authObj.$logout();
-			con
-			console.log('User logged out!');
-			console.log('authData.uid', authData.uid);
-			$location.path('/');
+			console.log('logging out');
+				Auth.$unauth();
+			
+			// $location.path('/');
 
 		};
 
