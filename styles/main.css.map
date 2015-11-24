@@ -1,7 +1,8 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AACA,UAAW;EACV,UAAU,EAAE,IAAI;;AAGjB,iBAAkB;EACjB,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,GAAG;EACZ,WAAW,EAAE,IAAI;EACjB,YAAY,EAAE,IAAI",
+"sources": ["../sass/main.scss"],
+>>>>>>> kg-authentication
 "names": [],
 "file": "main.css"
 }
