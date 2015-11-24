@@ -24,8 +24,8 @@ app.controller('AuthCtrl', ['Auth', '$firebaseAuth', 'userFactory', '$location',
 				password: self.password
 			}).then(function(authData, loggedInUser) {
 				console.log('Logged in as: ', authData.uid);
-				$location.path('/profile');
 				userFactory.setUser(authData);
+				$location.path('/profile');
 			}).catch(function(error) {
 				self.error = error;
 				console.log('Authentication failed:', error);

@@ -1,28 +1,42 @@
 app.factory('userFactory', ['$firebaseArray', '$route', 
 	function($firebaseArray, $route) { 
 
-	var self = this;
 	var picsArray = [];
 	var loggedInUser, ref;
+	var newPic = {
+		title: null,
+		description: null,
+		tags: null,
+		albumName: null,
+		imageUrl: null
+	};
 
 	return {
 
 		setUser: function(authData) {
 			loggedInUser = authData;
 			console.log('loggedInUser', loggedInUser);
-			ref = new Firebase('https://instalgia.firebaseio.com/users/' + loggedInUser.uid + '/pics');
+			ref = new Firebase('https://instalgia.firebaseio.com/users/' + loggedInUser.uid + '/pics/');
 			picsArray = $firebaseArray(ref);
+			console.log('ref', ref);
 			console.log('picsArray', picsArray);
-		},
-
-		getUserPics: function() {
 			return picsArray;
 		},
 
-		addPics: function() {
+		addPic: function(newPic) {
+			console.log('picsArray', picsArray);
+			picsArray.$add(newPic)
+			.then(function(ref) {
+				var id = ref.key();
+				console.log('added pic with id ' + id);
+			})
+		},
 
+
+		getPicsArray: function() {
+			console.log('picsArray', picsArray);
+			return picsArray;
 		}
- 
 
 	}; //end return
 
