@@ -1,4 +1,4 @@
-var app = angular.module('InstaApp',['ngRoute', 'firebase']);
+var app = angular.module('InstaApp',['ngRoute', 'firebase', 'ui.bootstrap']);
 
 app.config(['$routeProvider',
   function($routeProvider) {
@@ -12,8 +12,12 @@ app.config(['$routeProvider',
         controller: 'AuthCtrl as authCtrl'
       })
       .when('/profile', {
-      	templateUrl: 'partials/profile.html',
-      	controller: 'AuthCtrl as authCtrl'
+        templateUrl: 'partials/profile.html',
+        controller: 'ProfileCtrl as profileCtrl'
       })
+      .when('/addPicForm', {
+      	templateUrl: 'partials/addPicForm.html',
+      	controller: 'AddPicCtrl as addPicCtrl'
+      });
   }
  ]); // End config
