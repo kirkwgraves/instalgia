@@ -1,7 +1,6 @@
-var app = angular.module('InstaApp',['ngRoute', 'firebase', 'ui.bootstrap']);
+var app = angular.module('InstaApp',['ngRoute', 'firebase']);
 
-app.config(['$routeProvider',
-  function($routeProvider) {
+app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'partials/login.html',
@@ -13,11 +12,7 @@ app.config(['$routeProvider',
       })
       .when('/profile', {
         templateUrl: 'partials/profile.html',
-        controller: 'ProfileCtrl as profileCtrl'
+        controller: 'AddPicCtrl as addPicCtrl'
       })
-      .when('/addPicForm', {
-      	templateUrl: 'partials/addPicForm.html',
-      	controller: 'AddPicCtrl as addPicCtrl'
-      });
   }
  ]); // End config

@@ -1,6 +1,90 @@
+body {
+	padding-top: 60px;
+	background: url('https://themebin.files.wordpress.com/2010/02/vintage_old_desert_road_1920x1200_by_irbe9.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#login-form {
+	color: white;
+	padding-top: 7px;
+	padding-bottom: 8px;
+	background-color: black;
+	opacity: .65;
+	color: white;
+}	
+
+#login-form h3 {
+	text-align: center;
+	padding-top: 3px;
+}
+
+#login-form a {
+	color: darkorange;
+}
+
+#login-form button {
+	margin-left: 50px;
+}
+
+#login-header h1 {
+	text-align: center;
+	color: white;
+}
+
+input#email {
+	width: 80%;
+	color: white;
+	font-size: 1.2em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+}
+
+input#password {
+	width: 80%;
+	color: white;
+	font-size: 1.2em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+}
+
+.add-pic-form, {
+	width: 85%;
+	margin-top: 100px;
+	margin-left: 90px;
+	padding-top: 7px;
+	padding-bottom: 8px;
+	background-color: black;
+	opacity: .65;
+	color: white;
+}
+
+h1#pic-form-heading {
+	margin-left: 28px;
+	margin-top: 10px;
+}
+
+.form-group {
+	width: 80%;
+	padding-left: 30px;
+	padding-top: 10px;
+}
+
+.form-control {
+	color: white;
+	font-size: 1.2em;
+}
+
+#form-button {
+	margin-top: -2px;
+	margin-left: 30px;
+}
 
 .jumbotron {
-	margin-top: 55px;
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;

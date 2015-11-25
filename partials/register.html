@@ -1,4 +1,6 @@
-<form name="form" class="register-form">
+<div ng-include="'partials/navbar.html'"></div>
+<div ng-include="'partials/jumbotron.html'"></div>
+<form ng-controller="AuthCtrl as authCtrl" name="form" class="register-form">
   <div class="email__register">
 	  <span>EMAIL</span> <input placeholder="user@example.com" ng-model="authCtrl.email" type="text"/>
   </div>

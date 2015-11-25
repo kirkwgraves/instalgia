@@ -1,11 +1,10 @@
-<div class="navbar navbar-material-blue navbar-inverse navbar-fixed-top">
+<div ng-controller="AuthCtrl as authCtrl" class="navbar navbar-material-blue navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="collapse navbar-collapse">
 
       <a class="navbar-brand text-muted" href="#">INSTALGIA</a>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><button class="btn btn-material-blue" href="#" class="selected">Nostalgic Pics</button></li>
           <li><button class="btn btn-material-blue" href="#" class="selected">Nostalgic Friends</button></li>
           <li><button class="btn btn-material-blue" ng-click="authCtrl.logout()">Logout</button></li>
         </ul>

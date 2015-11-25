@@ -2,6 +2,8 @@ app.controller('AuthCtrl', ['Auth', '$firebaseAuth', 'userFactory', '$location',
 	function(Auth, $firebaseAuth, userFactory, $location) {
 
 		var self = this;
+		var userId;
+
 
 		self.register = function() {
 			Auth.$createUser({
@@ -25,6 +27,8 @@ app.controller('AuthCtrl', ['Auth', '$firebaseAuth', 'userFactory', '$location',
 			}).then(function(authData, loggedInUser) {
 				console.log('Logged in as: ', authData.uid);
 				userFactory.setUser(authData);
+				userId = authData.password.email;
+				console.log('userId', userId);
 				$location.path('/profile');
 			}).catch(function(error) {
 				self.error = error;
