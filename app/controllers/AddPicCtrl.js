@@ -2,7 +2,13 @@ app.controller('AddPicCtrl', ['userFactory', '$firebaseArray',
 	function(userFactory, $firebaseArray) {
 
 		var self = this;
-
+		self.newPic = {
+				title: null,
+				description: null,
+				tags: null,
+				albumName: null,
+				imageUrl: null
+			};
 		self.picsArray = userFactory.getPicsArray();
 
 	
@@ -18,11 +24,11 @@ app.controller('AddPicCtrl', ['userFactory', '$firebaseArray',
 			userFactory.addPic(newPic);
 
 			self.newPic = {
-				title: "",
-				description: "",
-				tags: "",
-				albumName: "",
-				imageUrl: ""
+				title: null,
+				description: null,
+				tags: null,
+				albumName: null,
+				imageUrl: null
 			};
 
 		};
