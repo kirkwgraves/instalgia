@@ -6,6 +6,8 @@ app.controller('ProfileCtrl', ['userFactory', '$firebaseArray',
 
 		picsArray = userFactory.getPicsArray();
 		console.log('picsArray', picsArray);
+		// console.log('pic 1', picsArray[0]);
+		// console.log('pic2', picsArray[1]);
 
 
 	}]);
