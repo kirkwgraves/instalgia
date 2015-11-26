@@ -3,6 +3,7 @@ app.controller('AuthCtrl', ['Auth', '$firebaseAuth', 'userFactory', '$location',
 
 		var self = this;
 		var userId;
+		self.test = 'TEST';
 
 
 		self.register = function() {
@@ -29,7 +30,7 @@ app.controller('AuthCtrl', ['Auth', '$firebaseAuth', 'userFactory', '$location',
 				userFactory.setUser(authData);
 				userId = authData.password.email;
 				console.log('userId', userId);
-				$location.path('/profile');
+				$location.path('/user-profile');
 			}).catch(function(error) {
 				self.error = error;
 				console.log('Authentication failed:', error);
