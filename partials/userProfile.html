@@ -1,9 +1,7 @@
 <div ng-include="'partials/navbar.html'"></div>
 <div id="user-profile_wrapper" ng-controller="ProfileCtrl as profileCtrl">
 	<h1>YOUR INSTALGIC PICS</h1>
-	<div ng-controller="ProfileCtrl as profileCtrl" ng-model="profileCtrl.picsArray">
-			<h2>{{pic.albumName}}</h2>
-			<h2>{{pic.title}}</h2>
 	</div>
+	<div ng-controller="ProfileCtrl as profileCtrl" ng-model="profileCtrl.picsArray">{{profileCtrl.title}}</div>
 	<!-- <img src={{profileCtrl.picsArray[0].key().imageUrl}}>
 	     -->
