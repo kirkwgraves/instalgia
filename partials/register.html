@@ -1,15 +1,19 @@
 <div ng-include="'partials/navbar.html'"></div>
 <div ng-include="'partials/jumbotron.html'"></div>
-<form ng-controller="AuthCtrl as authCtrl" name="form" class="register-form">
-  <div class="email__register">
-	  <span>EMAIL</span> <input placeholder="user@example.com" ng-model="authCtrl.email" type="text"/>
-  </div>
-  <div class="password__register">
-	  <span>PASSWORD</span> <input placeholder="Enter a password" ng-model="authCtrl.password" type="text"/>
-  </div>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<form ng-controller="AuthCtrl as authCtrl" name="form" class="register-form">
+		  <div class="email__register">
+			  <input class="form-control" id="reg-email" placeholder="Create username with email address (e.g., user@example.com)" ng-model="authCtrl.email" type="text"/>
+		  </div>
+		  <div class="password__register">
+			  <input class="form-control" id="reg-password" placeholder="Enter a password" ng-model="authCtrl.password" type="text"/>
+		  </div>
 
-  <button href="#/" class="btn btn-material-blue register__btn" ng-click="authCtrl.register()">REGISTER</button>
+		  <button href="#/" class="btn btn-material-blue register__btn" ng-click="authCtrl.register()">REGISTER</button>
 
-  <button class="btn btn-material-red" ng-click="authCtrl.removeUser()">REMOVE</button>
-  
-</form>
+		  <button class="btn btn-material-red" ng-click="authCtrl.removeUser()">REMOVE USER</button>
+		  
+		</form>
+	</div>
+</div>

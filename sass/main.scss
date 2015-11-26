@@ -7,6 +7,28 @@ body {
 	background-size: cover;
 }
 
+.register-form {
+	color: white;
+	padding-top: 7px;
+	padding-bottom: 8px;
+	background-color: black;
+	opacity: .85;
+	color: white;
+}
+
+input#reg-email, input#reg-password {
+	width: 80%;
+	color: white;
+	font-size: 1.1em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+}
+
+.register__btn {
+	margin-left: 50px;
+}
+
 #login-form {
 	color: white;
 	padding-top: 7px;
@@ -34,19 +56,10 @@ body {
 	color: white;
 }
 
-input#email {
+input#email, input#password {
 	width: 80%;
 	color: white;
-	font-size: 1.2em;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 10px;
-}
-
-input#password {
-	width: 80%;
-	color: white;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 10px;
@@ -86,6 +99,8 @@ h1#pic-form-heading {
 
 .jumbotron {
 	width: 80%;
+	background-color: black;
+	opacity: .85;
 	margin-left: auto;
 	margin-right: auto;
 }
