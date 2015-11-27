@@ -118,7 +118,7 @@ h1#pic-form-heading {
 }
 
 .pic-table {
-	width: 70%;
+	width: 90%;
 	margin-top: 70px;
 	margin-left: 165px;
 	padding-top: 7px;
@@ -126,4 +126,8 @@ h1#pic-form-heading {
 	background-color: black;
 	opacity: .85;
 	color: white;
+}
+
+.pic-table th {
+	text-align: center;
 }

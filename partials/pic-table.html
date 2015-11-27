@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-7 col-md-offset-2">
+  <div class="col-md-10 col-md-offset-2">
     <div class="pic-table">
       <table ng-controller="ProfileCtrl as profileCtrl">
 
@@ -10,11 +10,11 @@
           <th>Album</th>
         </tr>
 
-        <tr ng-model="profileCtrl.userPicObj">
-          <td><img ng-src={{profileCtrl.userPicObj.imageUrl}}></td>
-          <td>{{profileCtrl.userPicObj.description}}</td>
-          <td>{{profileCtrl.userPicObj.tags}}</td>
-          <td>{{profileCtrl.userPicObj.album}}</td>
+        <tr  ng-repeat="pic in profileCtrl.picsArray" ng-model="profileCtrl.picsArray">
+          <td><img ng-src={{profileCtrl.picsArray.imageUrl}}></td>
+          <td>{{profileCtrl.picsArray.description}}</td>
+          <td>{{profileCtrl.picsArray.tags}}</td>
+          <td>{{profileCtrl.picsArray.album}}</td>
         </tr>
 
       </table>
