@@ -3,7 +3,6 @@ app.controller('AuthCtrl', ['Auth', '$firebaseAuth', 'userFactory', '$location',
 
 		var self = this;
 		var userId;
-		self.test = 'TEST';
 
 
 		self.register = function() {
@@ -56,4 +55,10 @@ app.controller('AuthCtrl', ['Auth', '$firebaseAuth', 'userFactory', '$location',
 			});
 		};
 
+		self.checkIn = function() {
+			if (userId === true) {
+				console.log('It is true!');
+				return userId;
+			}
+		}
 }]);
