@@ -2,15 +2,21 @@
   <div class="col-md-7 col-md-offset-2">
     <div class="pic-table">
       <table ng-controller="ProfileCtrl as profileCtrl">
+
         <tr>
-          <th>Pic</th>
+          <th>Photo</th>
           <th>Description</th>
           <th>Tags</th>
           <th>Album</th>
         </tr>
-        <tr>
-          <th>{{profileCtrl.test}}</th>
+
+        <tr ng-model="profileCtrl.userPicObj">
+          <td><img ng-src={{profileCtrl.userPicObj.imageUrl}}></td>
+          <td>{{profileCtrl.userPicObj.description}}</td>
+          <td>{{profileCtrl.userPicObj.tags}}</td>
+          <td>{{profileCtrl.userPicObj.album}}</td>
         </tr>
+
       </table>
     </div>
   </div>
