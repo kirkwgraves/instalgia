@@ -14,5 +14,9 @@ app.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'partials/userProfile.html',
         controller: 'ProfileCtrl as profileCtrl'
       })
+      .when('/add-form', {
+        templateUrl: 'partials/addPicForm.html',
+        controller: 'AddPicCtrl as addPicCtrl'
+      })
   }
  ]); // End config

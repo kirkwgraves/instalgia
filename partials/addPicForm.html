@@ -1,24 +1,31 @@
 <!-- Form to save photo info to user's Firebase (image title, description, tags, photo album name, image location url) -->
-<div>
-  <h1 id="pic-form-heading">Create Memories</h1>
-</div>
-<div>
-  <form role="form" novalidate>
-    <div class="form-group">
-      <input type="text" class="form-control" id="uploadImageTitle" placeholder="Give your pic a title" ng-model="addPicCtrl.newPic.title" required>
+<div ng-include="'partials/navbar.html'"></div>
+<div class="row">
+  <div class="col-md-7 col-md-offset-2">
+    <div class="add-pic-form">
+      <div>
+        <h1 id="pic-form-heading">Add Instalgic Pics</h1>
+      </div>
+      <div>
+        <form role="form" novalidate>
+          <div class="form-group">
+            <input type="text" class="form-control" id="uploadImageTitle" placeholder="Give your pic a title" ng-model="addPicCtrl.newPic.title" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="3" id="uploadDescription" placeholder="Describe your pic in a few words" ng-model="addPicCtrl.newPic.description" required></textarea>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="uploadTags" placeholder="Add tags to your pic for searchability" ng-model="addPicCtrl.newPic.tags" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="uploadAlbumName" placeholder="Assign your pic to an album" ng-model="addPicCtrl.newPic.albumName" required>
+          </div>
+          <div class="form-group">
+            <input type="url" class="form-control" id="uploadImageUrl" placeholder="Enter the image URL" ng-model="addPicCtrl.newPic.imageUrl" required>
+          </div>
+          <button type="submit" class="form-button btn btn-material-blue" ng-click="addPicCtrl.addUserPic()">Submit</button>
+        </form>
+      </div>
     </div>
-    <div class="form-group">
-      <textarea class="form-control" rows="3" id="uploadDescription" placeholder="Describe your pic in a few words" ng-model="addPicCtrl.newPic.description" required></textarea>
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control" id="uploadTags" placeholder="Add tags to your pic for searchability" ng-model="addPicCtrl.newPic.tags" required>
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control" id="uploadAlbumName" placeholder="Assign your pic to an album" ng-model="addPicCtrl.newPic.albumName" required>
-    </div>
-    <div class="form-group">
-      <input type="url" class="form-control" id="uploadImageUrl" placeholder="Enter the image URL" ng-model="addPicCtrl.newPic.imageUrl" required>
-    </div>
-    <button id="form-button" type="submit" class="btn btn-material-blue" ng-click="addPicCtrl.addUserPic()">Submit</button>
-  </form>
+  </div>
 </div>

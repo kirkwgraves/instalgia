@@ -2,15 +2,16 @@ app.controller('AddPicCtrl', ['userFactory', '$firebaseArray',
 	function(userFactory, $firebaseArray) {
 
 	var self = this;
-	self.newPic = {
-			title: null,
-			description: null,
-			tags: null,
-			albumName: null,
-			imageUrl: null
-		};
-	self.picsArray = userFactory.getPicsArray();
+	// self.newPic = {
+	// 		title: null,
+	// 		description: null,
+	// 		tags: null,
+	// 		albumName: null,
+	// 		imageUrl: null
+	// 	};
 
+	self.picsArray = userFactory.getPicsArray();
+	console.log('self.picsArray', self.picsArray);
 
 	self.addUserPic = function() {
 		var newPic = {
