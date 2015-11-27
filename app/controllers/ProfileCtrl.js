@@ -2,6 +2,7 @@ app.controller('ProfileCtrl', ['userFactory', '$firebaseArray',
 	function(userFactory, $firebaseArray) {
 
 	var self = this;
+	self.test = 'TEST';
 
 	var userPicObj = {
 		title: null,

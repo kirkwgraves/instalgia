@@ -1,9 +1,4 @@
 <div ng-include="'partials/navbar.html'"></div>
 <a href="#/add-form" class="btn btn-material-blue" role="button">ADD A NEW PIC</a>
 
-<div ng-controller="ProfileCtrl as profileCtrl" id="user-profile_wrapper">
-	<h1>YOUR INSTALGIC PICS</h1>
-		<div>
-			<div>{{userPicObj.title}}</div>
-		</div>
-</div>
+<div ng-include="'partials/pic-table.html'"></div>		
