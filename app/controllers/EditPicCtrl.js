@@ -11,8 +11,7 @@ app.controller('EditPicCtrl', ['userFactory', '$firebaseArray',
 			title: self.editedPic.title,
 			description: self.editedPic.description,
 			tags: self.editedPic.tags,
-			albumName: self.editedPic.albumName,
-			imageUrl: self.editedPic.imageUrl
+			albumName: self.editedPic.albumName
 		};
 
 		userFactory.editPic(editedPic);
@@ -21,8 +20,7 @@ app.controller('EditPicCtrl', ['userFactory', '$firebaseArray',
 			title: null,
 			description: null,
 			tags: null,
-			albumName: null,
-			imageUrl: null
+			albumName: null
 		};
 	};
 
