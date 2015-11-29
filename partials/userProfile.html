@@ -1,26 +1,26 @@
 <div ng-include="'partials/navbar.html'"></div>
 <a href="#/add-form" class="btn btn-material-blue" role="button">ADD A NEW PIC</a>
 <div class="row">
-  <div class="col-md-11">
-    <div class="pic-table">
-      <table ng-controller="ProfileCtrl as profileCtrl">
+  <div class="col-md-12">
+  <div class="pic-table">
+    <table ng-controller="ProfileCtrl as profileCtrl">
 
-        <tr>
-          <th>PIC</th>
-          <th>DESCRIPTION</th>
-          <th>TAGS</th>
-          <th>ALBUM</th>
-        </tr>
+      <tr>
+        <th>PIC</th>
+        <th>DESCRIPTION</th>
+        <th>TAGS</th>
+        <th>ALBUM</th>
+      </tr>
 
-        <tr ng-repeat="pic in profileCtrl.picsArray" ng-model="profileCtrl.picsArray">
-          <td><img ng-src={{pic.imageUrl}}></td>
-          <td>{{pic.description}}</td>
-          <td>{{pic.tags}}</td>
-          <td>{{pic.albumName}}</td>
-        </tr>
+      <tr ng-repeat="pic in profileCtrl.picsArray" ng-model="profileCtrl.picsArray">
+        <td><img ng-src={{pic.imageUrl}}></td>
+        <td>{{pic.description}}</td>
+        <td>{{pic.tags}}</td>
+        <td>{{pic.albumName}}</td>
+      </tr>
 
-      </table>
-    </div>
+    </table>
+  </div>
   </div>
 </div>
 
