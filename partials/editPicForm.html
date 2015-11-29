@@ -1,30 +1,30 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<!-- Users should be able to save photo info to firebase (image title, description, tags, photo album name, image location url) -->
-<h1>Edit Memories</h1>
-<form>
-  <div class="form-group">
-    <label for="editImageTitle">Image Title:</label>
-    <input type="text" class="form-control" id="editImageTitle" placeholder="Image Title">
+<!-- Form to edit photo info for a given user's Firebase (image title, description, tags, photo album name) -->
+<div ng-include="'partials/navbar.html'"></div>
+<div class="row">
+  <div class="col-md-7 col-md-offset-2">
+    <div class="add-pic-form">
+      <div>
+        <h1 id="pic-form-heading">Edit Instalgic Pics</h1>
+      </div>
+      
+      <div>
+        <form role="form" novalidate>
+          <div class="form-group">
+            <input type="text" class="form-control" id="editImageTitle" placeholder="Edit title" ng-model="editPicCtrl.editedPic.title" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="3" id="editDescription" placeholder="Edit description" ng-model="editPicCtrl.editedPic.description" required></textarea>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="editTags" placeholder="Edit tags" ng-model="editPicCtrl.editedPic.tags" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="editAlbumName" placeholder="Edit assigned album" ng-model="editPicCtrl.editedPic.albumName" required>
+          </div>
+      
+          <button type="submit" class="form-button btn btn-material-blue" ng-click="editPicCtrl.editUserPic()">Submit</button>
+        </form>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="editDescription">Description:</label>
-    <textarea class="form-control" rows="3" id="editDescription"></textarea>
-  </div>
-  <div class="form-group">
-    <label for="editTags">Tags:</label>
-    <input type="text" class="form-control" id="editTags" placeholder="Tags">
-  </div>
-  <div class="form-group">
-    <label for="editAlbumName">Album Name:</label>
-    <input type="text" class="form-control" id="editAlbumName" placeholder="Album Name">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+</div>

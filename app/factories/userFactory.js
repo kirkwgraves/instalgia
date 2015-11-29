@@ -1,5 +1,5 @@
-app.factory('userFactory', ['$firebaseArray', '$route', 
-	function($firebaseArray, $route) { 
+app.factory('userFactory', ['$firebaseArray', '$firebaseObject' '$route', 
+	function($firebaseArray, $firebaseObject, $route) { 
 
 	var picsArray = [];
 	var loggedInUser, ref;
@@ -25,6 +25,10 @@ app.factory('userFactory', ['$firebaseArray', '$route',
 			});
 
 		},
+
+		editPic: function(editedPic) {
+			console.log()
+		} 
 
 		getPicsArray: function() {
 			console.log('picsArray', picsArray);
