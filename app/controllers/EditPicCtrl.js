@@ -7,11 +7,12 @@ app.controller('EditPicCtrl', ['userFactory', '$firebaseArray',
 	console.log('self.picsArray', self.picsArray);
 
 	self.editUserPic = function() {
+		
 		var editedPic = {
-			title: self.editedPic.title,
-			description: self.editedPic.description,
-			tags: self.editedPic.tags,
-			albumName: self.editedPic.albumName
+			title: $('#editTitle').val();
+			description: $('#editDescription').val();
+			tags: $('#editTags').val();
+			albumName: $('#editAlbumName').val();
 		};
 
 		userFactory.editPic(editedPic);
