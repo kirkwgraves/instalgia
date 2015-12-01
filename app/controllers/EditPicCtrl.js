@@ -1,22 +1,20 @@
-app.controller('EditPicCtrl', ['userFactory', '$firebaseArray', 
-	function(userFactory, $firebaseArray) {
+app.controller('EditPicCtrl', ['userFactory', '$firebaseArray',
+	function(userFactory, $firebaseArray, $routeParams) {
 
 	var self = this;
-
+	
 	self.picsArray = userFactory.getPicsArray();
 	console.log('self.picsArray', self.picsArray);
 
+	
+
 	self.editUserPic = function() {
-		var editedPic = {
-			title: self.editedPic.title,
-			description: self.editedPic.description,
-			tags: self.editedPic.tags,
-			albumName: self.editedPic.albumName
-		};
+		
+		console.log('picToEdit', picToEdit);
+		
+		userFactory.editPic(picToEdit);
 
-		userFactory.editPic(editedPic);
-
-		self.editedPic = {
+		self.picToEdit = {
 			title: null,
 			description: null,
 			tags: null,

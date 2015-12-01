@@ -26,8 +26,11 @@ app.factory('userFactory', ['$firebaseArray', '$firebaseObject', '$route',
 
 		},
 
-		editPic: function(editedPic) {
-			console.log()
+		editPic: function(picToEdit) {
+			var index = picsArray.$indexFor(picToEdit.id);
+			console.log('index', index);
+      picsArray[index] = picToEdit;
+      picsArray.$save(index);
 		}, 
 
 		getPicsArray: function() {

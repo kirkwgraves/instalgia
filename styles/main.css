@@ -112,4 +112,14 @@ h1#pic-form-heading {
   text-align: center;
   margin-right: 15px; }
 
+.edit-pic-form {
+  width: 70%;
+  margin-top: 70px;
+  margin-left: 165px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  background-color: black;
+  opacity: .85;
+  color: white; }
+
 /*# sourceMappingURL=main.css.map */

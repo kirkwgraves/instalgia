@@ -18,5 +18,9 @@ app.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'partials/addPicForm.html',
         controller: 'AddPicCtrl as addPicCtrl'
       })
+      .when('/edit-form', {
+        templateUrl: 'partials/editPicForm.html',
+        controller: 'EditPicCtrl as editPicCtrl'
+      })
   }
  ]); // End config

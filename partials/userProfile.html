@@ -13,7 +13,7 @@
       </tr>
 
       <tr ng-repeat="pic in profileCtrl.picsArray" ng-model="profileCtrl.picsArray">
-        <td><img ng-src={{pic.imageUrl}}></td>
+        <td><div style="width: 150; height: 150;"><img ng-src={{pic.imageUrl}}></div><a class="btn btn-material-blue" role="button" href="#/edit-form">EDIT</a></td>
         <td>{{pic.description}}</td>
         <td>{{pic.tags}}</td>
         <td>{{pic.albumName}}</td>
